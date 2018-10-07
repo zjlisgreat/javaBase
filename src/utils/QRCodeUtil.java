@@ -13,6 +13,7 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 
 /**
+ * 生成二维码工具
  *@author zjl
  *2018年9月13日 下午10:31:36
  */
