@@ -6,7 +6,9 @@ import java.util.List;
 import org.bson.Document;
 
 import com.mongodb.MongoClient;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
 public class MongoTest {
@@ -42,6 +44,16 @@ public class MongoTest {
 		//更新多个文档 TODO
 		
 		//查询
+		//查全部
+//		MongoCursor<Document>  cursor = it.iterator();
+//		while (cursor.hasNext()) {
+//			System.out.println(cursor.next());
+//		}
+		//查第一个
+		FindIterable<Document> it = collection.find().limit(1).skip(2);
+		Document doc = it.first();
+		System.out.println(doc);
+		
 		
 		client.close();
 	}
