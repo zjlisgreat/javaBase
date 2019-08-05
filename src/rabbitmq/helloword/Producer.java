@@ -35,6 +35,7 @@ public class Producer {
 			message = message + i;
 			channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
 			Thread.sleep(1000);
+			System.out.println("第"+i+"次发送的消息："+message);
 		}
 		System.out.println("生产者 send ："+message);
 		channel.close();

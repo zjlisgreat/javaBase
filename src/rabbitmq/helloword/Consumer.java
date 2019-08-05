@@ -9,7 +9,11 @@ import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 
 import utils.RabbitConnectionUtil;
-
+/**
+ * 点对点模式
+ * @author Administrator
+ *
+ */
 public class Consumer {
 	
 	private static final String QUEUE_NAME = "test_queue";
@@ -19,6 +23,8 @@ public class Consumer {
 		Channel channel = connection.createChannel(1);
 		channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 		StringBuffer message = new StringBuffer();
+		
+		//定义队列消费者
 		com.rabbitmq.client.Consumer consumer = new DefaultConsumer(channel) {
 			@Override
 			public void handleDelivery(String consumerTag,Envelope envelope,BasicProperties basicProperties,byte[] body) throws IOException {
@@ -32,6 +38,7 @@ public class Consumer {
 				System.out.println(new String(body,"utf-8"));
 			}
 		};
+		//监听队列
 		channel.basicConsume(QUEUE_NAME, true,consumer);
 		System.out.println(message.toString());
 		
