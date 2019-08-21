@@ -1,4 +1,4 @@
-package collection.test;
+package collection.cases;
 
 import java.util.ArrayList;
 import java.util.List;
