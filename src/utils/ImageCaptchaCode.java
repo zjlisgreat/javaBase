@@ -10,6 +10,12 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
+/**
+ * https://www.cnblogs.com/hxw6/p/10151766.html
+ * 画图片验证码
+ * @author zjl
+ *
+ */
 public class ImageCaptchaCode {
 	private static final int DEFAULT_WIDTH = 100;
 	private static final int DEFAULT_HEIGHT = 30;
