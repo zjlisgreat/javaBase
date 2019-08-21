@@ -50,7 +50,7 @@ public class CollectionSubList {
 //        List<List<Integer>> totalList = paging(list, 10);
 //        System.out.println(totalList);
         
-        List<Integer> resList = page(list, 10, 0);
+        List<Integer> resList = page(list, 10, 1);
         System.out.println(resList);
     }
     
