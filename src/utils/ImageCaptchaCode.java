@@ -31,7 +31,7 @@ public class ImageCaptchaCode {
 		//g.drawRect(0,0,width-1,height-1);
 		//设置字体:字体、字号、大小 
 		g.setFont(new Font("宋体",Font.BOLD,14)); 
-		//设置背景颜色
+		//设置颜色
 		g.setColor(Color.BLACK);
 		//向图片上写字符串 
 		g.drawString("HelloWorld",10,20); 
