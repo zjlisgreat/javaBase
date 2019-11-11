@@ -16,5 +16,6 @@
 	<classpathentry kind="lib" path="lib/httpcore-4.4.1.jar"/>
 	<classpathentry kind="lib" path="lib/fastjson-1.2.7.jar"/>
 	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/tio-websocket-server-3.5.1.v20190826-RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
