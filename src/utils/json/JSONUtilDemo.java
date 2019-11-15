@@ -7,4 +7,7 @@ package utils.json;
  */
 public class JSONUtilDemo {
 
+	public static void main(String[] args) {
+		
+	}
 }
