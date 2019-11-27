@@ -12,6 +12,7 @@ public class MyClient {
 		OutputStream out = socket.getOutputStream();
 		InputStream in = socket.getInputStream();
 		out.write("hello world!".getBytes());
+		out.flush();
 		byte[] buff = new byte[1024];
 		int len = 0;
 		while ((len = in.read(buff)) != -1) {
