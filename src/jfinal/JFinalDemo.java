@@ -1,5 +1,6 @@
 package jfinal;
 
+import java.util.Date;
 import java.util.List;
 
 import com.alibaba.fastjson.JSONObject;
@@ -21,8 +22,24 @@ public class JFinalDemo {
 		arp.setContainerFactory(new CaseInsensitiveContainerFactory(true));
 		dp.start();
 		arp.start();
-		List<Record> allRecords = Db.find("select * from user");
+		//增加
+//		Record r = new Record();
+//		r.set("name","zjl1");
+//		r.set("content", "hello1");
+//		Db.save("test", "id",r);
+		//删除
+//		Db.deleteById("test", 11);
+		//修改
+//		Db.update("update test set content = ? where id = ?","world",10);
+		
+		List<Record> allRecords = Db.find("select * from test");
 		System.out.println(JSONObject.toJSONString(allRecords));
+		for (Record record : allRecords) {
+			System.out.println("id:"+record.getLong("id"));
+			System.out.println("name:"+record.getStr("name"));
+			System.out.println("content:"+record.getStr("content"));
+			System.out.println(JSONObject.toJSONString(record));
+		}
 		
 		
 		
