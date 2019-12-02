@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
 /**
@@ -27,5 +26,7 @@ public class JSONUtilDemo {
 		map1.put("create_time", new Date());
 		list.add(map1);
 		System.out.println(JSONObject.toJSONString(list,true));
+		
+		System.out.println(JSONObject.toJSONString(null));
 	}
 }
