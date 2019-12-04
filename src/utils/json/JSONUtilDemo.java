@@ -28,5 +28,10 @@ public class JSONUtilDemo {
 		System.out.println(JSONObject.toJSONString(list,true));
 		
 		System.out.println(JSONObject.toJSONString(null));
+		
+		JSONObject obj = new JSONObject();
+		obj.put("aaa","123");
+		obj.put("id", 1);
+		System.out.println(obj.getString("id"));
 	}
 }
