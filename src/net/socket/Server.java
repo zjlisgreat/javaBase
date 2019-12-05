@@ -11,6 +11,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * 客户端服务端一对一无序聊
+ * @author zjl
+ *
+ */
 public class Server {
 	
 	private static Socket socket = null;
@@ -36,7 +41,7 @@ public class Server {
 								System.out.println(host+"客户端说:"+br.readLine());
 							}
 						} catch (IOException e) {
-							e.printStackTrace();
+							System.out.println("用户退出!");
 						}
 					}
 				}).start();
@@ -48,18 +53,19 @@ public class Server {
 							//发消息给客户端
 							OutputStream os = socket.getOutputStream();
 							OutputStreamWriter osw = new OutputStreamWriter(os);
-							PrintWriter pw = new PrintWriter(osw);
+							PrintWriter pw = new PrintWriter(osw,true);
 							Scanner sc = new Scanner(System.in);
-							pw.println(sc.next());
-							pw.flush();
+							while(true) {
+								pw.println(sc.nextLine());
+							}
 						} catch (IOException e) {
-							e.printStackTrace();
+							System.out.println("用户退出!");
 						}
 					}
 				}).start();
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("用户退出!");
 		}
 	}
 }

@@ -6,6 +6,11 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+/**
+ * 客户端服务端一对一聊一次
+ * @author zjl
+ *
+ */
 public class MyClient {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		Socket socket = new Socket("localhost", 8089);

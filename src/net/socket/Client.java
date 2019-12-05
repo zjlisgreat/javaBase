@@ -10,6 +10,11 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * 客户端服务端一对一无序聊
+ * @author zjl
+ *
+ */
 public class Client {
 	
 	private  static Socket socket = null;
@@ -26,10 +31,11 @@ public class Client {
 						//向服务器发消息
 						OutputStream os = socket.getOutputStream();
 						OutputStreamWriter osw = new OutputStreamWriter(os);
-						PrintWriter pw = new PrintWriter(osw);
+						PrintWriter pw = new PrintWriter(osw,true);
 						Scanner sc = new Scanner(System.in);
-						pw.println(sc.next());
-						pw.flush();
+						while(true) {
+							pw.println(sc.nextLine());
+						}
 					} catch (IOException e) {
 						e.printStackTrace();
 					}

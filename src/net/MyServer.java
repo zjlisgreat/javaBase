@@ -6,6 +6,11 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * 客户端服务端一对一聊一次
+ * @author zjl
+ *
+ */
 public class MyServer {
 	public static void main(String[] args) throws IOException {
 		ServerSocket serverSocket = new  ServerSocket(8089);
